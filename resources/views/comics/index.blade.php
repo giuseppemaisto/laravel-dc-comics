@@ -7,7 +7,7 @@
 
 
     <div class="row d-flex flex-column">
-        <div class="col d-flex flex-wrap w-100">
+        <div class="col d-flex flex-wrap w-20">
             @foreach ($comics as $comic)
             <a href="{{route('comics.show', ['comic' => $comic['id']])}}">
                 <div class="card">
