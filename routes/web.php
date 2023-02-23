@@ -1,8 +1,8 @@
 <?php
 
 use Illuminate\Support\Facades\Route;
-use App\Http\Controllers\ComicController as ComicController;
-use App\Http\Controllers\PagesController as PagesController;
+use App\Http\Controllers\ComicController;
+use App\Http\Controllers\PagesController;
 
 
 /*
@@ -43,6 +43,7 @@ Route::get('/home/{param}', function($param){
 */
 
 Route::get('/', [PagesController::class,'index']) ->name('homepage');
+Route::resource('comics', ComicController::class);
 
 Route::get('/CHARACTERS', function () {
     return view('CHARACTERS');

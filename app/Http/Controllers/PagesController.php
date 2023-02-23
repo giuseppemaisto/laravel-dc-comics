@@ -13,4 +13,6 @@ class PagesController extends Controller
         return view('comics.index', compact('comics'));
         
     }
+
+    
 }

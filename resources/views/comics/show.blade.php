@@ -13,7 +13,7 @@
         </div>
 
         @if(!empty($comic['image']))
-        <img src="{{ $comic['image'}}" alt="">
+        <img src="{{ $comic['image']}}" alt="">
         @else 
         <h5>immagine non disponibile </h5>
         @endif

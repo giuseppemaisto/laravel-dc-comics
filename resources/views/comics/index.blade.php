@@ -1,24 +1,24 @@
 @extends('layouts.app')
 @section('content')
 <div class="container">
-    <div class="row justify-content-center">
-    @foreach ($comics as $comic)
+    <div>
+         <a href="{{route('comics.create')}}"><button class="btn btn-light">aggiungi fumetto</button></a>
+    </div>
 
-<div class="col-2">
-<a href="{{route('comics.show', ['comic' => $comic['id']])}}">
-    <div class="card">
-    
-        <img class="card-img-top img-fluid" src="{{$comic['image']}}" alt="{{$comic['image']}}">
-        <div class="card-body">
-            <h3>{{ $comic['titolo']}}</h3>
-            <h6>{{$comic['serie']}}</h6>
+
+    <div class="row d-flex flex-column">
+        <div class="col d-flex flex-wrap w-100">
+            @foreach ($comics as $comic)
+            <a href="{{route('comics.show', ['comic' => $comic['id']])}}">
+                <div class="card">
+                    <img class="card-img-top img-fluid" src="{{$comic['image']}}" alt="{{$comic['image']}}">
+                    <h3>{{ $comic['titolo']}}</h3>
+                </div>
+            </a>
+            @endforeach
         </div>
     </div>
-</a>
-</div>
- 
-@endforeach
+    
 
-    </div>
 </div>
 @endsection
