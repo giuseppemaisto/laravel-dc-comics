@@ -7,12 +7,12 @@
 
 
     <div class="row d-flex flex-column">
-        <div class="col d-flex flex-wrap w-20">
+        <div class="col d-flex flex-wrap justify-content-center">
             @foreach ($comics as $comic)
             <a href="{{route('comics.show', ['comic' => $comic['id']])}}">
                 <div class="card">
-                    <img class="card-img-top img-fluid" src="{{$comic['image']}}" alt="{{$comic['image']}}">
-                    <h3>{{ $comic['titolo']}}</h3>
+                    <img style="width: 200px" class="card-img-top img-fluid" src="{{$comic['image']}}" alt="{{$comic['image']}}">
+                    <h6>{{ $comic['titolo']}}</h6>
                 </div>
             </a>
             @endforeach

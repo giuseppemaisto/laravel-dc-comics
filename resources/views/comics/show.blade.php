@@ -13,22 +13,22 @@
         </div>
 
         @if(!empty($comic['image']))
-        <img src="{{ $comic['image']}}" alt="">
+        <img style="width: 200px" src="{{ $comic['image']}}" alt="">
         @else 
         <h5>immagine non disponibile </h5>
         @endif
 
         <div>
-            <h3>titolo</h3>
-            <h6>{{$comic['titolo']}}</h6>
+            <h3 class="titolo">titolo</h3>
+            <h6">{{$comic['titolo']}}</h6>
 
-            <h3>copertina</h3>
+            <h3 class="titolo">copertina</h3>
             <h6>{{$comic['image']}}</h6>
 
-            <h3>serie</h3>
+            <h3 class="titolo">serie</h3>
             <h6>{{$comic['serie']}}</h6>
 
-            <h3>descrizione</h3>
+            <h3 class="titolo">descrizione</h3>
             <h6>{{$comic['descrizione']}}</h6>
         </div>
     </div>
