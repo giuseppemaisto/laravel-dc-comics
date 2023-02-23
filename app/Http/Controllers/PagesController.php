@@ -10,7 +10,7 @@ class PagesController extends Controller
 {
     public function index(){
         $comics = comic::all();
-        return view('homepage', compact('comics'));
+        return view('comics.index', compact('comics'));
         
     }
 }
