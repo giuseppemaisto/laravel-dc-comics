@@ -15,21 +15,23 @@
                    
                 
                     <div class="card-body">
-                    <h3>{{ $comic['title']}}</h3>
-                    <h5>{{$comic['series']}}</h5>
-                    <h5>{{$comic['type']}}</h5>
-                    <h5>{{$comic['sale_date']}}</h5>
+                        <h3>{{ $comic['title']}}</h3>
+                        <h5>{{$comic['series']}}</h5>
+                        <h5>{{$comic['type']}}</h5>
+                        <h5>{{$comic['sale_date']}}</h5>
 
                     </div>
-
+                </a>
                     <div class="m-2" >
                         <a href="{{route('comics.edit', ['comic' => $comic->id]) }}" class="btn btn-warning">modifica </a>
                     </div>
-                    <div class="m-2">
-                        <button class="btn btn-danger">elimina </button>
-                    </div>
                 </div>
-            </a>
+            
+            <form action="{{ route('comics.destroy', ['comic' => $comic->id]) }}" method="POST">
+                @csrf
+                @method('DELETE')
+                <button type="submit" class="btn btn-danger my-2">elimina</button>
+            </form>
             @endforeach
         </div>
     </div>
