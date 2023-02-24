@@ -47,6 +47,13 @@
         placeholder="inserisci immagine">
     </div>
 
+    <div class="form-group">
+        <label class="control-label">data</label>
+        <input type="date" name="sale_date" class="form-control"
+        placeholder="inserisci data">
+    </div>
+    
+
     <div class="form-group mb-3">
         <label class="control-label">descrizione</label>
         <textarea type="text" name="description" class="form-control"
