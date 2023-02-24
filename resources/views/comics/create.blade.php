@@ -5,9 +5,21 @@
     <div class="col-12 d-flex justify-content-between">
         <div>
             <h1>iserisci nuovo fumetto</h1>
+            @if($errors->any())
+                <div class="alert alert-danger">
+                    <ul>
+                        @foreach($errors->all() as $error)
+                        <li>{{ $error }}</li>
+                        @endforeach
+                    </ul>
+        
+                </div>
+                @endif
         </div>
         <div class="my-2">
         <a href="{{ route('comics.index')}}" class="btn btn-primary"> torna all'elenco</a>
+        
+            
         </div>
     </div>
 </div>
@@ -60,7 +72,7 @@
         placeholder="inserisci descrizione" rows="10"></textarea>
     </div>
     <div class="form-group">
-        <button type="submit" class="form-control btn btn-primary">salva</button>
+        <button type="submit" class="form-control btn btn-primary w-50">salva</button>
     </div>
 </form>
 </div>

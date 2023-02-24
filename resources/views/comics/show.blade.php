@@ -2,7 +2,7 @@
 @section('content')
 
 
-<div class="container">
+<div class="container bg-white my-2">
     <div class="row justify-content-center">
 
         <div class="col-12">
@@ -22,6 +22,9 @@
             <h3 class="titolo">titolo</h3>
             <h6">{{$comic['title']}}</h6>
 
+            <h5>{{$comic['series']}}</h5>
+            <h5>{{$comic['type']}}</h5>
+            
             <h3 class="titolo">copertina</h3>
             <h6>{{$comic['thumb']}}</h6>
 
@@ -29,7 +32,13 @@
             <h6>{{$comic['series']}}</h6>
 
             <h3 class="titolo">descrizione</h3>
+            
             <h6>{{$comic['description']}}</h6>
+
+       
+            <h3>data di uscita</h3>
+            <h5>{{$comic['sale_date']}}</h5>
+
         </div>
     </div>
 </div>
