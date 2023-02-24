@@ -20,36 +20,36 @@
     @csrf
     <div class="form-group">
         <label class="control-label">Titolo</label>
-        <input type="text" name="titolo" class="form-control"
+        <input type="text" name="title" class="form-control"
         placeholder="inserisci titolo">
     </div>
 
     <div class="form-group">
         <label class="control-label">Tipo</label>
-        <select class="form-control" name="tipo">
+        <select class="form-control" name="type">
             <option value="comic book">comic book</option>
             <option value="graphic novel">graphic novel</option>
         </select>
     </div>
     <div class="form-group">
         <label class="control-label">serie</label>
-        <input type="text" name="serie" class="form-control"
+        <input type="text" name="series" class="form-control"
         placeholder="inserisci serie">
     </div>
     <div class="form-group">
         <label class="control-label">prezzo</label>
-        <input type="text" name="prezzo" class="form-control"
+        <input type="text" name="price" class="form-control"
         placeholder="inserisci prezzo">
     </div>
     <div class="form-group">
         <label class="control-label">immagine</label>
-        <input type="text" name="image" class="form-control"
+        <input type="text" name="thumb" class="form-control"
         placeholder="inserisci immagine">
     </div>
 
     <div class="form-group mb-3">
         <label class="control-label">descrizione</label>
-        <textarea type="text" name="descrizione" class="form-control"
+        <textarea type="text" name="description" class="form-control"
         placeholder="inserisci descrizione" rows="10"></textarea>
     </div>
     <div class="form-group">

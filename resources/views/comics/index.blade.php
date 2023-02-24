@@ -11,8 +11,8 @@
             @foreach ($comics as $comic)
             <a href="{{route('comics.show', ['comic' => $comic['id']])}}">
                 <div class="card">
-                    <img style="width: 200px" class="card-img-top img-fluid" src="{{$comic['image']}}" alt="{{$comic['image']}}">
-                    <h6>{{ $comic['titolo']}}</h6>
+                    <img style="width: 200px" class="card-img-top img-fluid" src="{{$comic['thumb']}}" alt="{{$comic['thumb']}}">
+                    <h6>{{ $comic['title']}}</h6>
                 </div>
             </a>
             @endforeach
