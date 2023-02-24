@@ -105,7 +105,22 @@ class ComicController extends Controller
      */
     public function update(Request $request, $id)
     {
-        //
+        $comic = comic::findOrFail($id);
+
+        $request->validate([
+            'title' => 'required|max:90',
+            'description' => 'nullable',
+            'type' => 'required|max:20',
+            'sale_date' => 'required',
+            'price' => 'required',
+            'thumb' => 'nullable',
+            'series'=> 'required', 
+        ]);
+        $form_data = $request->all();
+
+        $comic->update($form_data);
+
+        return redirect()->route('comics.show', ['comic' => $comic->id]);
     }
 
     /**

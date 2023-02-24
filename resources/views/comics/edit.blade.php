@@ -30,6 +30,7 @@
 
 <form action="{{ route('comics.update', $comic->id)}}" method="POST">
     @csrf
+    @method('PUT')
     <div class="form-group">
         <label class="control-label">Titolo</label>
         <input type="text" name="title" class="form-control"
