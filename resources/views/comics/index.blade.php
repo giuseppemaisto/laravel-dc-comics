@@ -23,7 +23,7 @@
                     </div>
 
                     <div class="m-2" >
-                        <button class="btn btn-warning">modifica </button>
+                        <a href="{{route('comics.edit', ['comic' => $comic->id]) }}" class="btn btn-warning">modifica </a>
                     </div>
                     <div class="m-2">
                         <button class="btn btn-danger">elimina </button>
